@@ -5,31 +5,21 @@
     <title>Document</title>
 </head>
 <body>
-    Hello
-<!--    <script data-skip-moving="true">
-        (function(w,d,u){
-                var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
-                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.ru/b1440815/crm/site_button/loader_2_iu44kj.js');
-    </script>-->
-    
-    <!--Start of Tawk.to Script
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5a4df77fd7591465c7067ea2/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-End of Tawk.to Script-->
-<script src="tawk.js"></script>
+    <div id="1">Hello</div>
+<!--<script src="tawk.js"></script>-->
+
 <script>
-    var elements = document.querySelectorAll('iframe');
-    console.log(elements);
+    
+function addScript(src){
+  var script = document.createElement('script');
+  script.src = src;
+  script.async = false; // чтобы гарантировать порядок
+  document.body.appendChild(script);
+}
+
+addScript("tawk.js");
+addScript("append.js");
+addScript("log.js");
 </script>
 </body>
 </html>
