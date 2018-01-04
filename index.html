@@ -6,20 +6,7 @@
 </head>
 <body>
     <div id="1">Hello</div>
-<!--<script src="tawk.js"></script>-->
-
-<script>
-    
-function addScript(src){
-  var script = document.createElement('script');
-  script.src = src;
-  script.async = false; // чтобы гарантировать порядок
-  document.body.appendChild(script);
-}
-
-addScript("tawk.js");
-addScript("append.js");
-addScript("log.js");
-</script>
+    <button onclick=" manageScripts()">Вызвать чат</button>
+<script src="jsManager.js"></script>
 </body>
 </html>
