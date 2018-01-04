@@ -4,4 +4,4 @@ function changeChatState (chatID = 0){
     frames[1].style.display = "none";
 }
 
-changeChatState();
+setTimeout(changeChatState, 500);

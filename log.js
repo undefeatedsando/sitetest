@@ -1,4 +1,4 @@
-setTimeout(log, 1000);
+setTimeout(log, 100);
 function log(){
  console.log(document.querySelectorAll("iframe"));
 }
