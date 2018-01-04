@@ -3,6 +3,7 @@ var funcArr = ["tawk.js", "append.js", "log.js", "tawkAppend.js"];
 function manageScripts(arr = funcArr){
     for (var i=0; i<arr.length; i++){
         addScript(arr[i]);
+        console.log(arr[i]);
     }
 }
 
