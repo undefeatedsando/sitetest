@@ -5,4 +5,4 @@ function changeChatState (chatID = 0){
     console.log("What the hell");
 }
 
-setTimeout(changeChatState, 500);
+setTimeout(changeChatState, 1000);
