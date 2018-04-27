@@ -1,4 +1,9 @@
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
+var Tawk_API=Tawk_API||{}, 
+    Tawk_API.visitor = {
+    name : 'Гасович Анна',
+    email : 'visitor@email.com'
+    },
+    Tawk_LoadStart=new Date(); Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
