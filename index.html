@@ -11,7 +11,7 @@
     <button onclick=" clearTawk()">Закрыть чат</button>
     <div id='tawk_5a4df77fd7591465c7067ea2'></div>
     <div id='tawk_5af99b2b227d3d7edc25458f'></div>
-    <div> <h1>Marker 15</h1> </div>
+    <div> <h1>Marker 16</h1> </div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 
@@ -46,15 +46,15 @@ function manageScripts2(){
     addTawk('https://embed.tawk.to/5af99b2b227d3d7edc25458f/1cdfgf57l');
 }
 function clearTawk(){
+  if(Tawk_API.isChatOngoing()){
+    Tawk_API.endChat();
+  }
   Tawk_API = undefined;
   $_Tawk_WidgetId = undefined;
   $_Tawk_AccountKey = undefined;
   $_Tawk = undefined;
   $_TAWK_JSON = undefined;
   $__TawkSocket = undefined;
-  if(Tawk_API.isChatOngoing()){
-    Tawk_API.endChat();
-    }
   var watcher = document.querySelector("iframe");
   watcher.remove();
   clearNode(document.getElementById('tawk_5a4df77fd7591465c7067ea2'));
