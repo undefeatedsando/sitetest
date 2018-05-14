@@ -8,10 +8,10 @@
     <div id="1">Hello</div>
     <button onclick=" manageScripts()">Вызвать синий чат</button>
     <button onclick=" manageScripts2()">Вызвать зеленый чат</button>
-    <button onclick=" clearTawk()">Выкинуть все нахуй</button>
+    <button onclick=" clearTawk()">Закрыть чат</button>
     <div id='tawk_5a4df77fd7591465c7067ea2'></div>
     <div id='tawk_5af99b2b227d3d7edc25458f'></div>
-    <div> <h1>Marker 5</h1> </div>
+    <div> <h1>Marker 6</h1> </div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 
@@ -28,6 +28,9 @@ function buildTawk(){
 }
 
 function manageScripts(){
+    if (!Tawk_API.isChatHidden()){
+    clearTawk();
+    }
     buildTawk();
     Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -38,6 +41,9 @@ function manageScripts(){
     s0.parentNode.insertBefore(s1,s0);}
     
 function manageScripts2(){
+    if (!Tawk_API.isChatHidden()){
+    clearTawk();
+    }
     buildTawk();
     Tawk_API.embedded='tawk_5af99b2b227d3d7edc25458f';
     var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
