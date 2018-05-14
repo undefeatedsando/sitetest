@@ -28,10 +28,10 @@ function buildTawk(){
 }
 
 function manageScripts(){
+    buildTawk();
     if (!Tawk_API.isChatHidden()){
     clearTawk();
     }
-    buildTawk();
     Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
@@ -41,10 +41,10 @@ function manageScripts(){
     s0.parentNode.insertBefore(s1,s0);}
     
 function manageScripts2(){
+    buildTawk();
     if (!Tawk_API.isChatHidden()){
     clearTawk();
     }
-    buildTawk();
     Tawk_API.embedded='tawk_5af99b2b227d3d7edc25458f';
     var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
     s0.async=true;
