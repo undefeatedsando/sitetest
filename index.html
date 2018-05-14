@@ -11,13 +11,12 @@
     <button onclick=" clearTawk()">Закрыть чат</button>
     <div id='tawk_5a4df77fd7591465c7067ea2'></div>
     <div id='tawk_5af99b2b227d3d7edc25458f'></div>
-    <div> <h1>Marker 10</h1> </div>
+    <div> <h1>Marker 11</h1> </div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 
 var Tawk_API;
     
-
 function buildTawk(){
   Tawk_API=Tawk_API||{}; 
     Tawk_API.visitor = {
@@ -26,34 +25,29 @@ function buildTawk(){
     };
     var Tawk_LoadStart=new Date(); 
 }
-
 function manageScripts(){
     buildTawk();
     Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
     if ((window.hasOwnProperty("$_Tawk_WidgetId"))&&($_Tawk_WidgetId!=undefined)){
-    clearTawk();
+      clearTawk();
+      setTimeout(addTawk('https://embed.tawk.to/5a4df77fd7591465c7067ea2/1c314ma4l'), 300);
     }
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5a4df77fd7591465c7067ea2/1c314ma4l';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);}
+    else{
+      addTawk('https://embed.tawk.to/5a4df77fd7591465c7067ea2/1c314ma4l');
+    }
+}
     
 function manageScripts2(){
     buildTawk();
     Tawk_API.embedded='tawk_5af99b2b227d3d7edc25458f';
     if ((window.hasOwnProperty("$_Tawk_WidgetId"))&&($_Tawk_WidgetId!=undefined)){
-    clearTawk();
-    }   
-    var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
-    s0.async=true;
-    s0.src='https://embed.tawk.to/5af99b2b227d3d7edc25458f/1cdfgf57l';
-    s0.charset='UTF-8';
-    s0.setAttribute('crossorigin','*');
-    s1.parentNode.insertBefore(s0,s1);
+      clearTawk();
+      setTimeout(addTawk('https://embed.tawk.to/5af99b2b227d3d7edc25458f/1cdfgf57l'), 300);
+    }
+    else{
+      addTawk('https://embed.tawk.to/5af99b2b227d3d7edc25458f/1cdfgf57l');
+    }
 }
-
 function clearTawk(){
   Tawk_API = undefined;
   $_Tawk_WidgetId = undefined;
@@ -66,13 +60,20 @@ function clearTawk(){
   clearNode(document.getElementById('tawk_5a4df77fd7591465c7067ea2'));
   clearNode(document.getElementById('tawk_5af99b2b227d3d7edc25458f'));
 }
-
 function clearNode(node){
   while (node.hasChildNodes()) {
     node.removeChild(node.firstChild);
   } 
 }
 
+function addTawk(widget){
+  var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
+    s0.async=true;
+    s0.src=widget;//'https://embed.tawk.to/5af99b2b227d3d7edc25458f/1cdfgf57l';
+    s0.charset='UTF-8';
+    s0.setAttribute('crossorigin','*');
+    s1.parentNode.insertBefore(s0,s1);
+}
 </script>
 </body>
 </html>
