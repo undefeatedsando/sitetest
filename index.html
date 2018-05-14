@@ -7,22 +7,28 @@
 <body>
     <div id="1">Hello</div>
     <button onclick=" manageScripts()">Вызвать синий чат</button>
-    <button onclick=" manageScripts2()">Вызвать красный чат</button>
+    <button onclick=" manageScripts2()">Вызвать зеленый чат</button>
+    <button onclick=" clearTawk()">Выкинуть все нахуй</button>
     <div id='tawk_5a4df77fd7591465c7067ea2'></div>
     <div id='tawk_5af99b2b227d3d7edc25458f'></div>
-    <div> <h1>Marker 4</h1> </div>
+    <div> <h1>Marker 5</h1> </div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 
-     var Tawk_API=Tawk_API||{}; 
+var Tawk_API;
+    
+
+function buildTawk(){
+  Tawk_API=Tawk_API||{}; 
     Tawk_API.visitor = {
     name : 'visitor name',
     email : 'visitor@email.com'
     };
     var Tawk_LoadStart=new Date(); 
-    
-    
+}
+
 function manageScripts(){
+    buildTawk();
     Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
@@ -32,6 +38,7 @@ function manageScripts(){
     s0.parentNode.insertBefore(s1,s0);}
     
 function manageScripts2(){
+    buildTawk();
     Tawk_API.embedded='tawk_5af99b2b227d3d7edc25458f';
     var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
     s0.async=true;
@@ -40,6 +47,26 @@ function manageScripts2(){
     s0.setAttribute('crossorigin','*');
     s1.parentNode.insertBefore(s0,s1);
 }
+
+function clearTawk(){
+  Tawk_API = undefined;
+  $_Tawk_WidgetId = undefined;
+  $_Tawk_AccountKey = undefined;
+  $_Tawk = undefined;
+  $_TAWK_JSON = undefined;
+  $__TawkSocket = undefined;
+  var watcher = document.querySelector("iframe");
+  watcher.remove();
+  clearNode(document.getElementById('tawk_5a4df77fd7591465c7067ea2'));
+  clearNode(document.getElementById('tawk_5af99b2b227d3d7edc25458f'));
+}
+
+function clearNode(node){
+  while (node.hasChildNodes()) {
+    node.removeChild(node.firstChild);
+  } 
+}
+
 </script>
 </body>
 </html>
