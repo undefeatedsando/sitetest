@@ -11,7 +11,7 @@
     <button onclick=" clearTawk()">Закрыть чат</button>
     <div id='tawk_5a4df77fd7591465c7067ea2'></div>
     <div id='tawk_5af99b2b227d3d7edc25458f'></div>
-    <div> <h1>Marker 7</h1> </div>
+    <div> <h1>Marker 8</h1> </div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 
@@ -30,7 +30,7 @@ function buildTawk(){
 function manageScripts(){
     buildTawk();
     Tawk_API.embedded='tawk_5a4df77fd7591465c7067ea2';
-    if ($_Tawk_WidgetId != undefined){
+    if (window.hasOwnProperty("$_Tawk_WidgetId")){
     clearTawk();
     }
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -43,7 +43,7 @@ function manageScripts(){
 function manageScripts2(){
     buildTawk();
     Tawk_API.embedded='tawk_5af99b2b227d3d7edc25458f';
-    if ($_Tawk_WidgetId != undefined){
+    if (window.hasOwnProperty("$_Tawk_WidgetId")){
     clearTawk();
     }    
     var s0=document.createElement("script"),s1=document.getElementsByTagName("script")[0];
